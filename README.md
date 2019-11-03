@@ -3,4 +3,4 @@
 
 
 
-It is a hakcerspace focused on educations and arts.
+It is a hakcerspace focused on education and arts.
