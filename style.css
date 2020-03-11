@@ -9,4 +9,5 @@ header {
 }
 canvas {
   display: block;
+  padding: 2%;
 }
