@@ -9,17 +9,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+ 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
 
   </head>
   <body>
-      <header class="container">
-         <h1>JARDIM LAB</>
-         <script src="sketch.js"></script>
-      </header>
-    
+      <header class="grid-container">
+        
+     
+           <script src="sketch.js"></script>
+  
+           <div class="grid-container">
+            <div class="logo">
+              <div id="logo">
+                <h1>JARDIM LAB</h1>
+              </div>
+            </div>
+            <div class="nav">
+              <nav role="navegation"> 
+                <div id="burger">
+                    <input type="checkbox">
+                    <div class="bar-1"></div>
+                    <div class="bar-2"></div>
+                    <div class="bar-3"></div>
+                    <ul>
+                        <li><a href="index.html">Sobre</a></li>
+                        <li><a href="pessoas.html">Pessoas</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>     
+                </div>
+               
+            </nav>
+            </div>
+
+            <div class="canvas">
+              <canvas>
+            
+              </canvas>
+            </div>
+            <div class="courses"></div>
+            <div class="projects"></div>
+          </div>
+     
    
-  </body>
+    </body>
 </html>

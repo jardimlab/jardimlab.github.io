@@ -1,13 +1,151 @@
+/*
+    @author: Italo Adler
+    @year: 2020
+*/
+
 html, body {
   font-family: 'Press Start 2P', cursive;  
   margin: 0;
   padding: 0;
+
 }
 
 header {
-  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
 canvas {
-  display: block;
-  padding: 2%;
+
+  position: absolute;
+  top: 250px;
 }
+
+nav {
+  font-size: large;
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  margin: 0vw 4vw 0vw 0vw;
+  color: black;
+  cursor: pointer;
+}
+#logo:hover {
+  color: gray;
+}
+
+#burger {
+  margin: 1vw 4vw 4vw 4vw; 
+  transform: rotate(0);
+  transition: 0.5s ease;
+}
+
+#burger input {
+  transform: scale(5); 
+  margin: 30px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+  width: 50px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#burger input:checked ~ .bar-1 {
+  color: #717EC3;
+  transform: rotate(-45deg) translate(-7px, 6px);
+  transition: 0.5s ease; 
+}
+#burger input:checked ~ .bar-2 {
+  opacity: 0;
+}
+#burger input:checked ~ .bar-3 {
+  color: #717EC3;
+  transform: rotate(45deg) translate(-7px, -6px);
+  transition: 0.5s ease;
+}
+
+#burger input:checked ~ ul {
+  opacity: 1;
+}
+
+ul {
+  font-size: large;
+  padding: 0;
+  margin-top: -25px;
+  margin-left: 55px;
+  opacity: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+
+}
+
+#burger li {
+  margin: 0vw 1vw;
+}
+
+#burger a {
+  
+  color: black;
+  text-decoration: none;
+
+}
+
+#burger a:hover {
+  color: #AE8799;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+em {
+  letter-spacing: 0.1em;
+  word-spacing: 0.01em;
+}
+article {
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: left;
+  text-align: justify;
+  color: #555555;
+  letter-spacing: 0.15em;
+  word-spacing: 0.01rem;
+}
+article p {
+  margin: 5px 10px 10px 5px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "logo nav nav nav" "canvas canvas canvas canvas" "projects projects courses courses";
+}
+
+.logo { grid-area: logo; }
+
+.nav { grid-area: nav; }
+
+.canvas { grid-area: canvas; }
+
+.courses { grid-area: courses; }
+
+.projects { grid-area: projects; }
+
+
